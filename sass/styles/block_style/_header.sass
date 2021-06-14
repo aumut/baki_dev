@@ -1,0 +1,185 @@
+
+/*** HEADER BLOCK ***/
+
+.wrap-header
+	width: 100%
+	height: 900px
+	background:
+		color: rgb(192,192,188)
+		color: linear-gradient(90deg, rgba(192,192,188,1) 0%, rgba(219,219,217,1) 100%)
+		image: url(../images/content/header_bg.png)
+		repeat: no-repeat
+		size: 650px
+		position: 84% 47px
+	+flexbox
+	+flex-direction(column)
+	position: relative
+	+phone_max
+		background-size: 60%
+		background-image: url(../images/content/header_bg_mob.png)
+		background-position: right bottom
+
+.ic_mouse
+	display: inline-block
+	width: $w_ic_round
+	height: $h_ic_round
+	+border-radius(50%)
+	border: 0px
+	padding: 0px
+	background-color: $col_acsent2
+	position: relative
+	position: absolute
+	left: 50%
+	bottom:  0px
+	margin-bottom: calc(#{$h_ic_round}/(-2))
+	&:before
+		content: ''
+		position: absolute
+		width: 21px
+		height: 21px
+		left: 0px
+		top: 0px
+		margin-left: 13.5px
+		margin-top: 13.5px
+		background-image: url(../images/ic/ic_mouse.svg)
+		background-size: cover
+		background-repeat: no-repeat
+
+
+.header
+	width: 100%
+	color: $col_header_text
+	position: relative
+	.container
+		padding-left: 0px
+		padding-right: 0px
+	.bl__inner
+		padding: 2.1rem 0px
+		height: 190px
+		+phone_max
+			padding-top: 25px
+			padding-bottom: 25px
+	.row
+		margin: 0
+		+flexbox
+		+justify-content(center)
+		+justify-content(space-between)
+		+align-items(center)
+	&__logo
+		width: $w_header_logo
+		+align-self(flex-start)
+		//+tablet_max
+			+flex-direction(column)
+		+phone_max
+			width: 190px
+			+flex-direction(column)
+			+align-items(flex-start)
+		.logo__text
+			margin-left: $ml_logo_text
+			//+tablet_max
+				margin-left: 0px
+				margin-top: $ml_logo_text
+			+phone_max
+				margin-left: 0px
+				margin-top: $ml_logo_text
+	&__nav
+		+align-self(flex-end)
+		z-index: 999
+		margin-top: 30px
+		margin-left: 60px
+		+phone_max
+			position: absolute
+			right: 0px
+			bottom: 30px
+		.btn-gamburg
+			display: none
+			+phone_max
+				display: block
+	&__contacts
+		+align-self(flex-start)
+		padding-top: $pT_contact_header
+	.btn-close
+		position: absolute
+		right: 15px
+
+.contacts
+	+flexbox
+	+flex-direction(column)
+	+align-items(flex-end)
+	&__phone
+		font-family: $ff_contact_phone
+		font-size: $fs_contact_phone
+		font-weight: 800
+		line-height: 1.5
+	&__text
+		font-size: $fs_contact_text
+		font-family: inherit
+
+
+.main-banner
+	height: 100%
+	+flexbox
+	flex: 1
+	+align-items(center)
+	.bl__inner
+		max-width: 700px
+		+flexbox
+		+flex-direction(column)
+		+align-items(flex-start)
+		+justify-content(center)
+	&__title
+		font-size: $fs_main_banner_title
+		letter-spacing: 1px
+		line-height: 1.2
+		text-align: center
+		margin-bottom: calc(#{$mB_main_banner} + 5px)
+		+phone_max
+			font-size: 30px
+			padding: 0 10px
+			margin-bottom: $mB_main_banner
+	&__subtitle
+		font-size: $fs_main_banner_subtitle
+		line-height: 1.4
+		text-align: center
+		padding: 0 60px
+		margin-bottom: $mB_main_banner
+		+phone_max
+			padding: 0 30px
+			font-size: 16px
+	.btn-wrap
+		margin-bottom: $mB_main_banner
+		+phone_max
+			+justify-content(flex-start)
+
+.btn-player-text
+	width: 80px
+	margin-left: 10px
+	font-size: $fs_btn_player_text
+
+.form-send
+	+flexbox
+	+justify-content(center)
+	+align-items(center)
+	+phone_max
+		+flex-direction(column)
+	.input-wrap
+		+phone_max
+			margin-bottom: 20px
+
+.phone-number
+	padding: 13px 50px
+	border-radius: 30px
+	margin-right: 10px
+	text-align: center
+
+.line_btm
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: -18px
+		left: 50%
+		width: 70px
+		height: 1px
+		margin-left: calc(-70px / 2)
+		background-color: $col_font_main

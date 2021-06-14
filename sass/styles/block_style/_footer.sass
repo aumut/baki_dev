@@ -1,0 +1,39 @@
+
+/*** FOOTER BLOCK ***/
+
+
+.footer
+  .bl__inner
+    padding-top: 50px
+    padding-bottom: 50px
+  &-list
+    +flexbox
+    +tablet_max
+      +flex-direction(column)
+  &-item
+    font-size: 16px
+    line-height: 1.5
+    letter-spacing: 1px
+    padding: 0 60px
+    border-right: 1px solid $col_acsent
+    +medium
+      padding: 0 30px
+    +tablet_max
+      margin-bottom: 15px
+      border-right: 0px
+    &:last-child
+      border-right: none
+  &-text
+    font-size: 20px
+    font-family: $ff_bold
+  &-item-soc
+    position: relative
+    .social
+      position: absolute
+      right: 14px
+      bottom: -14px
+      +tablet_max
+        right: 50%
+      +phone_max
+        bottom: -40px
+        margin-right: -40px

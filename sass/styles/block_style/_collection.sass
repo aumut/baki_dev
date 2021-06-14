@@ -1,0 +1,135 @@
+
+/*** COLLECT BLOCK ***/
+
+.collect
+  background: #fff
+//  .col-md-4
+   +tablet_max
+      max-width: 100%
+
+.collect__subtitle
+  margin-bottom: 44px
+
+.collect_carousel
+  height: 600px
+
+.carousel-indicators
+  bottom: -17px
+  display: flex
+  align-items: center
+
+.carousel-indicators li
+  width: 6px
+  height: 6px
+  border-radius: 50%
+  border: 3px solid #858585
+  opacity: 1
+
+.carousel-indicators .active
+  background: $col_orange
+  border-width: 5px
+
+.card
+  border-color: transparent
+
+.card:hover
+  -webkit-box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+  -moz-box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+  box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+  .card-body
+    display: block
+    width: auto
+    +tablet_max
+      -webkit-box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+      -moz-box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+      box-shadow: 1px 6px 5px 5px rgba(0,0,0,0.2)
+      width: 100%
+    +phone_max
+      padding: 20px 15px
+
+
+.card-body
+  display: none
+  position: absolute
+  bottom: 0
+  background: #FFFFFF
+  text-align: center
+  padding: 26px 35px 25px
+  z-index: 100
+
+.lastItem .card-body
+  +tablet_max
+    right: -2px
+
+
+.card-text
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-bottom: 10px
+
+.card-text--span
+  margin: 0 10px
+  line-height: 1.6
+  font-family: $ff_body
+
+.span__border-bottom
+  width: 80px
+  height: 11px
+  border: 1px solid transparent
+  border-bottom-color: #000
+
+.title__h4
+  font-size: 16px
+  line-height: 30px
+  font-family: $ff_submit_appl_info__title
+  &--fz18
+    font-size: 18px
+
+.carousel-item--title
+  text-align: center
+  margin-bottom: 20px
+
+.parameters
+  padding-bottom: 25px
+
+.parameters__title
+  margin-bottom: 5px
+
+.parameters__table
+  width: 100%
+
+.parameters__td
+  //border: 1px solid green
+  font-size: 16px
+  line-height: 30px
+  color: $col_font_main
+  text-align: left
+  font-family: $ff_body
+
+.btn--catalog
+  background: $btn_bg_yellow
+  padding: 8px 35px 8px 60px
+  font-size: 14px
+  line-height: 30px
+  color: $col_font_main
+  position: relative
+  &:before
+    position: absolute
+    content: ''
+    display: inline-block
+    width: 25px
+    height: 23px
+    top: 10px
+    left: 27px
+    background:
+      image: url("../images/ic/ic_btn_catalog.png")
+      repeat: no-repeat
+
+
+.parameters__td:nth-child(2n+1)
+  font-weight: 900
+
+.row
+  z-index: 1

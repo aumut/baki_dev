@@ -1,0 +1,91 @@
+
+/*** QUESTION BLOCK ***/
+
+.question__cols
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  +tablet_max
+    +flex-direction(column)
+
+.question__col
+  width: 50%
+  +tablet_max
+    width: auto
+
+.question__col--left
+  margin-right: 30px
+  +tablet_max
+    margin-right: 0px
+
+.question__item
+  width: 100%
+  background: $col_bg_grey
+  padding: 15px 68px 15px 30px
+  border-radius: 8px
+  position: relative
+  margin-bottom: 30px
+  color: #000
+  &:after
+    position: absolute
+    content: ''
+    display: inline-block
+    top: 20px
+    right: 23px
+    width: 48px
+    height: 42px
+
+.question__item--payment:after
+  background:
+    image: url("../images/ic/ic_credit_card.svg")
+    repeat: no-repeat
+    size: 48px 42px
+
+.question__item--returns:after
+  background:
+    image: url("../images/ic/ic_exch.svg")
+    repeat: no-repeat
+    size: 50px 47px
+  top: 40px
+  width: 50px
+  height: 47px
+
+.question__item--discount:after
+  background:
+    image: url("../images/ic/ic_tag.svg")
+    repeat: no-repeat
+    size: 50px 47px
+  top: 16px
+  right: 16px
+  width: 50px
+  height: 47px
+
+.question__item--delivery:after
+  background:
+    image: url("../images/ic/ic_fast_del.svg")
+    repeat: no-repeat
+    size: 52px 50px
+  top: 10px
+  width: 52px
+  height: 50px
+
+.question__item--title
+  font-family: $ff_bold
+  font-size: 16px
+  line-height: 26px
+  margin-bottom: 10px
+
+.question__item--answer
+  line-height: 1.8
+  font-size: 14px
+
+.answer__row
+  display: block
+
+.answer__paragraph
+  margin-bottom: 25px
+  &:last-child
+    margin-bottom: 0
+
+.question__title
+  margin-bottom: 56px

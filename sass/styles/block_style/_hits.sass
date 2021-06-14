@@ -1,0 +1,58 @@
+
+/*** HITS BLOCK ***/
+
+
+.hits
+  z-index: 1000
+  position: relative
+  .bl__inner
+    +flexbox
+    +flex-direction(column)
+    +justify-content(center)
+    +align-items(center)
+  .btn--catalog
+    width: 315px
+    position: relative
+    &:after
+      position: absolute
+      content: ''
+      display: inline-block
+      width: 45px
+      height: 66px
+      top: 0px
+      right: -67px
+      background:
+        image: url("../images/ic/ic_btn_arrow.png")
+        repeat: no-repeat
+      transform: rotate(-180deg)
+      transform: scaleX(-1)
+      +phone_max
+        right: -10px
+  .row
+    z-index: auto
+  .col-md-12
+    +medium_max
+      flex: 0 0 50%
+      max-width: 100%
+      text-align: center
+    +phone_max
+      flex: 0 0 100%
+
+.hits__title
+  margin-bottom: 68px
+
+.hits__list
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+.hits__item
+  width: 23%
+  margin-bottom: 30px
+
+.hits__item--img
+  width: 100%
+
+.modal-backdrop
+  z-index: 999

@@ -1,0 +1,97 @@
+
+/*** MAPS BLOCK ***/
+
+.coordinate
+  min-height: 650px
+  +tablet_max
+    min-height: 350px
+
+ymaps[id]
+  width: 470px!important
+  +tablet_max
+    height: auto!important
+    width: 425px!important
+  +phone_max
+    width: 325px!important
+
+#map
+  height: 100%
+  width: 100%
+  min-height: 650px
+
+.yBalloon
+  width: 470px
+  background: $col_bg_dark
+  padding: 30px 40px 25px 65px
+  +tablet_max
+    width: 426px
+    padding: 15px 30px 25px 40px
+  +phone_max
+    padding: 15px 10px 25px 20px
+    width: 325px
+
+.yBalloon--mb20
+  margin-bottom: 20px
+
+.yBalloon--col
+  display: flex
+  flex-direction: column
+
+.yBalloon__web
+  display: flex
+  justify-content: space-between
+
+.yBalloon__address
+  display: flex
+  justify-content: flex-start
+
+.yBalloon__address--country
+  margin-right: 30px
+
+.yBalloon__title
+  font-size: 20px
+  line-height: 25px
+  color: #ffffff
+  +tablet_max
+    font-size: 18px
+  +phone_max
+    font-size: 15px
+
+.yBalloon__title--bold
+  font-weight: 900
+
+.phones
+  display: flex
+  +phone_max
+    flex-direction: column
+
+.phone_num
+  font-size: 18px
+  +tablet_max
+    font-size: 16px
+
+.vert-separator
+  padding: 1px
+  border: 1px solid #fff
+  background: #fff
+  margin: 0 5px
+  +phone_max
+    display: none
+
+.ymaps-2-1-74-balloon__content, .ymaps-2-1-75-balloon__content
+  padding: 0 !important
+
+.ymaps-2-1-74-balloon__content ymaps, .ymaps-2-1-75-balloon__content ymaps
+  max-height: 265px !important
+
+.ymaps-2-1-74-balloon__tail, .ymaps-2-1-75-balloon__tail
+  display: none !important
+
+.ymaps-2-1-75-balloon.ymaps-2-1-75-balloon_layout_normal
+  top: -260px!important
+  left: -140px!important
+  +tablet_max
+    top: -260px!important
+    left: 0!important
+  +phone_max
+    left: 160px!important

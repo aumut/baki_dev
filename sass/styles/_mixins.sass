@@ -1,0 +1,123 @@
+=clearfix
+    &::after    
+        clear: both
+        content: ""
+        display: table
+  
+=border_radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    border-radius: $radius
+
+=border-radius-l($rad)
+    -webkit-border-top-left-radius: $rad 
+    -webkit-border-bottom-left-radius: $rad 
+    -moz-border-radius-topleft: $rad 
+    -moz-border-radius-bottomleft: $rad
+    border-top-left-radius: $rad    
+    border-bottom-left-radius: $rad
+
+=border-radius-r($rad)
+    -webkit-border-top-right-radius: $rad
+    -webkit-border-bottom-right-radius: $rad
+    -moz-border-radius-topright: $rad
+    -moz-border-radius-bottomright: $rad
+    border-top-right-radius: $rad
+    border-bottom-right-radius: $rad
+
+=border-radius-b($rad)  
+    -webkit-border-bottom-right-radius: $rad
+    -webkit-border-bottom-left-radius: $rad
+    -moz-border-radius-bottomright: $rad
+    -moz-border-radius-bottomleft: $rad
+    border-bottom-right-radius: $rad
+    border-bottom-left-radius: $rad
+
+=border-radius-t($rad)  
+    -webkit-border-top-left-radius: $rad
+    -webkit-border-top-right-radius: $rad
+    -moz-border-radius-topleft: $rad
+    -moz-border-radius-topright: $rad
+    border-top-left-radius: $rad
+    border-top-right-radius: $rad
+
+=box_shadow($shadows) 
+    -moz-box-shadow: $shadows
+    -webkit-box-shadow: $shadows
+    box-shadow: $shadows
+
+=placeholder
+    &::-webkit-input-placeholder
+        @content
+    &::-moz-placeholder         
+        @content
+    &:-moz-placeholder          
+        @content
+    &:-ms-input-placeholder     
+        @content
+
+// generic transform
+=transform($transforms) 
+    -moz-transform: $transforms
+        -o-transform: $transforms
+        -ms-transform: $transforms
+    -webkit-transform: $transforms 
+        transform: $transforms
+
+=transition($transition) 
+    transition: $transition
+    -moz-transition: $transition
+    -ms-transition: $transition
+    -o-transition: $transition
+    -webkit-transition: $transition
+           
+// rotate
+=rotate ($deg) 
+    +transform(rotate(#{$deg}deg))
+
+
+=extra_large
+    @media screen and (min-width: $extra_large-width)
+        @content
+=large
+    @media screen and (min-width: $large-width)
+        @content
+=medium
+    @media screen and (min-width: $medium-width)
+        @content        
+=tablet
+    @media screen and (min-width: $tablet-width)
+        @content
+=phone
+    @media screen and (min-width: $phoneSm-width)
+        @content
+
+=extra_large_max
+    @media screen and (max-width: $extra_large-width)
+        @content
+=large_max
+    @media screen and (max-width: $large-width)
+        @content
+=medium_max
+    @media screen and (max-width: $medium-width)
+        @content
+=tablet_max
+    @media screen and (max-width: $tablet-width)
+        @content
+=phone_max
+    @media screen and (max-width: $phone-width)
+        @content
+
+
+=user-select($val)
+    -webkit-user-select: $val
+    -moz-user-select: $val
+    -ms-user-select: $val
+    user-select: $val
+
+=font-face($family, $path, $weight: normal, $style: normal)
+    @font-face
+        font-family: $family
+        src: url('#{$path}.otf')
+        font-weight: $weight
+        font-style: $style

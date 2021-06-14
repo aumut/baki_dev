@@ -1,0 +1,61 @@
+
+/*** SERVICE BLOCK ***/
+
+.service__cols
+  display: flex
+  margin-top: 85px
+  margin-bottom: 45px
+  +tablet_max
+    +flex-direction(column)
+    margin: 0px
+
+.img-wrapper
+  //width: 570px
+  //height: 390px
+  width: auto
+  height: auto
+  +phone_max
+    width: 100%
+    height: auto
+
+.service--img
+  width: 100%
+  height: 100%
+
+.service__col--left
+  margin-right: 128px
+  +medium_max
+    margin-right: 60px
+  +tablet_max
+    margin-right: 0px
+
+.service__col--right
+  padding-top: 93px
+  +medium_max
+    padding-top: 0
+  +tablet_max
+    padding-top: 20px
+
+.service__title
+  text-align: left
+  margin-bottom: 5px
+
+.service__text
+  line-height: 1.3
+  margin-bottom: 32px
+
+.service__btn
+  padding: 9px 30px
+  background: $btn_bg_yellow
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    display: inline-block
+    width: 45px
+    height: 66px
+    top: 0px
+    right: -67px
+    background:
+      image: url("../images/ic/ic_btn_arrow__orange.png")
+      repeat: no-repeat

@@ -1,0 +1,82 @@
+
+/*** STEPS BLOCK ***/
+
+.steps
+  .title
+    margin-bottom: 90px
+  &-list
+    +flexbox
+    +justify-content(space-between)
+    +align-items(stretch)
+    +flex-wrap(wrap)
+    +medium_max
+      +justify-content(space-around)
+  &-item
+    width: 330px
+    height: auto
+    background-color: #FFFFFF
+    color: $col_font_main
+    display: inline-block
+    padding: 33px 50px
+    position: relative
+    margin-bottom: 72px
+    &__title
+      font-size: 20px
+      font-family: $ff_bold
+      line-height: 1.5
+      margin-bottom: 11px
+    &__text
+      font-size: 16px
+      font-family: inherit
+      line-height: 1.4
+      margin-bottom: 30px
+    .btn
+      padding: 7px 20px
+      display: block
+    &:before
+      content: ''
+      position: absolute
+      bottom: 17px
+      right: 15px
+      width: 45px
+      height: 48px
+      background:
+        color: transparent
+        image: url(../images/ic/ic_sewing.svg)
+        repeat: no-repeat
+        size: cover
+    &-digit
+      font-size: 150px
+      font-family: $ff_bold
+      color: rgba(255, 255, 255, 0.1)
+      letter-spacing: 3px
+      position: absolute
+      top: -32px
+      left: -46px
+    &:hover
+      background-color: $col_acsent3
+      color: #FFFFFF
+      .btn
+        background-color: #2C2E31
+        color: $col_acsent
+  .appl-it
+    &:before
+      background-image: url(../images/ic/ic_comp_chat.svg)
+  .call-it
+    &:before
+      background-image: url(../images/ic/ic_cust_serv.svg)
+  .checkout-it
+    &:before
+      background-image: url(../images/ic/ic_phone_book.svg)
+  .pay-it
+    &:before
+      height: 45x
+      background-image: url(../images/ic/ic_credit_card.svg)
+  .send-it
+    &:before
+      background-image: url(../images/ic/ic_truck_deliver.svg)
+  .receive-it
+    &:before
+      height: 45px
+      background-image: url(../images/ic/ic_gift_black.svg)
+

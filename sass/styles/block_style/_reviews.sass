@@ -1,0 +1,78 @@
+
+/*** REVIEWS BLOCK ***/
+
+.reviews
+  background: #fff
+  .bl__inner
+    padding: 50px 22%
+    +medium_max
+      padding: 50px 10%
+    +tablet_max
+      padding: 20px 5%
+    +phone_max
+      padding: $pTB_bl_inner_phone 0px
+  .carousel
+    +tablet_max
+      padding: 0
+  .carousel-indicators
+    +tablet_max
+      bottom: 8px
+
+.reviews__title
+  margin-bottom: 0px
+
+.reviews__subtitle
+  margin-bottom: 52px
+
+.carousel-item
+  margin-bottom: 30px
+  
+.carousel-inner
+  overflow: visible
+
+.review
+  background: $col_bg_grey
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 40px 15% 70px
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    display: inline-block
+    width: 62px
+    height: 47px
+    //background: yellow
+  &:before
+    background: url("../images/ic/quote_start.png")
+    top: -23px
+    left: 35px
+  &:after
+    background: url("../images/ic/quote_end.png")
+    bottom: -23px
+    right: 35px
+
+.review .span__border-bottom
+  margin-bottom: 20px
+
+.review__img
+  width: 130px
+  height: 130px
+  border-radius: 50%
+  overflow: hidden
+  margin-bottom: 15px
+
+.user__img
+  width: 100%
+
+.review__fio
+  font-size: 18px
+  line-height: 28px
+  color: #000000
+
+.review__text
+  font-size: 16px
+  line-height: 22px
+  color: #000000
+  text-align: center

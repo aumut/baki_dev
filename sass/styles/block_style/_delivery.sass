@@ -1,0 +1,87 @@
+
+/*** DELIVERY BLOCK ***/
+
+.delivery
+  height: 800px
+  background:
+    image: url(../images/content/sng_bg.png)
+    size: 520px
+    position: 80% 28%
+    repeat: no-repeat
+  +phone_max
+    background-size: contain
+  //.container, .bl__inner
+      height: 100%
+  //.bl__inner
+      +flexbox
+      +flex-direction(column)
+  .title
+    margin-bottom: 75px
+  &-text
+    max-width: 490px
+    line-height: 1.5
+    letter-spacing: 1px
+    margin-bottom: 38px
+    +phone_max
+      max-width: $phoneSm-width
+  &-list
+    +flexbox
+    +justify-content(space-between)
+    +align-items(flex-start)
+    margin-top: 220px
+    +phone_max
+      margin-top: 120px
+  &-item
+    text-align: center
+    width: 300px
+    line-height: 1.5
+    position: relative
+    +phone_max
+      font-size: 13px
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      height: 50px
+      background:
+        color: transparent
+        repeat: no-repeat
+        size: cover
+    &:after
+      content: ''
+      position: absolute
+      top: -55px
+      right: -47px
+      width: 1px
+      height: 60px
+      background-color: $col_acsent
+      +medium_max
+        display: none
+    &:last-child
+      &:after
+        display: none
+  .package-it
+    &:before
+      width: 50px
+      height: 46px
+      top: -70px
+      margin-left: -14px
+      background-image: url(../images/ic/ic_box.svg)
+  .bus-it
+    &:before
+      margin-left: -60px
+      top: -75px
+      width: 72px
+      height: 50px
+      background-image: url(../images/ic/ic_delivery.svg)
+      background-size: contain
+      +phone_max
+        margin-left: -35px
+  .pay-it
+    &:before
+      width: 55px
+      margin-left: -60px
+      top: -75px
+      background-image: url(../images/ic/ic_credit_card_y.svg)
+      +phone_max
+        margin-left: -22px

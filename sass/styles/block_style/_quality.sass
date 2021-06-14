@@ -1,0 +1,73 @@
+
+/*** QUALITY BLOCK ***/
+
+.quality
+  background:
+    color: #41301D
+    image: url(../images/content/quality_bg.jpg)
+    size: cover
+    repeat: no-repeat
+  .title
+    padding: 0px 200px
+    margin-bottom: 80px
+    +tablet_max
+      padding: 0px
+  &-list
+    +flexbox
+    +justify-content(space-between)
+    +align-items(stretch)
+    +flex-wrap(wrap)
+    +medium_max
+      +justify-content(space-around)
+  &-item
+    width: 340px
+    height: auto
+    background-color: transparent
+    display: inline-block
+    margin-bottom: 10px
+    &__ic
+      color: $col_acsent
+      width: 65px
+      height: 65px
+      display: inline-block
+      background:
+        image: url(../images/ic/ic_sewing.svg)
+        repeat: no-repeat
+        size: cover
+    &__title
+      font-size: 20px
+      font-family: $ff_bold
+      line-height: 2
+      margin-top: 20px
+    &__text
+      font-size: 16px
+      font-family: inherit
+      line-height: 1.4
+      letter-spacing: 1px
+      padding-bottom: 10px
+
+  .refresh-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_sewing.svg)
+  .income-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_pocket.svg)
+  .perf-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_leather.svg)
+  .shipping-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_gift.svg)
+  .qlt_check-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_hanger.svg)
+  .sale-it
+    .quality-item__ic
+      background:
+        image: url(../images/ic/ic_offer.svg)
+

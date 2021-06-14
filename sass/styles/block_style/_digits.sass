@@ -1,0 +1,78 @@
+
+/*** DIGITS BLOCK ***/
+
+.digits
+  &_wrap
+    position: relative
+    overflow: hidden
+    height: calc(210px * 3)
+  .digit
+    +inline-flex
+    +flex-direction(row)
+    +align-items(flex-end)
+    position: absolute
+    top: 0
+    left: 0
+    &-num
+      +inline-flex
+      +flex-direction(column)
+      +align-items(flex-end)
+    &__figure
+      font-size: 100px
+      letter-spacing: 2px
+      color: #f9b602
+      font-family: $ff_bold
+      line-height: 0.75
+      +phone_max
+        font-size: 60px
+    &__unit
+      font-size: 30px
+      letter-spacing: 1px
+      color: #f9b602
+      margin-right: 10px
+    &__text
+      font-size: 18px
+      line-height: 1.2
+      +phone_max
+        font-size: 14px
+    &_1
+      left: 9%
+      top: 17%
+    &_2
+      left: 40%
+      top: 10%
+    &_3
+      left: 69%
+      top: 10%
+      +tablet_max
+        top: 28%
+      +phone_max
+        left: 45%
+    &_4
+      left: 21%
+      top: 42%
+      +tablet_max
+        top: 37%
+      +phone_max
+        top: 40%
+    &_5
+      left: 57%
+      top: 51%
+      +tablet_max
+        left: 30%
+        top: 54%
+      +phone_max
+        left: 3%
+      .digit__unit
+        margin-right: 85px
+    &_6
+      left: 11%
+      top: 78%
+      +phone_max
+        top: 74%
+    &_7
+      left: 44%
+      top: 82%
+      +phone_max
+        left: 26%
+        top: 87%

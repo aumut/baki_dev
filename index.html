@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/js_mediaqueries.js"></script>
+
+    <link rel="stylesheet" href="css/style.css"/></link>
+    <link rel="shortcut icon" href="images/content/favicon.ico" type="image/x-icon">
+    <title>Baki</title>
+</head>
+<body>
+<!-- Шапка и баннер -->
+<div class="wrap-header">
+    <header class="header bl">
+        <div class="container">
+            <div class="bl__inner">
+                <div class="row">
+                    <div class="logo header__logo">
+                        <a href="#" class="logo__ic"><img src="images/content/logo_big.jpg" alt="Baki"></a>
+                        <h3 class="logo__text">Производство и оптовая продажа женской одежды оптом из Киргизии</h3>
+                    </div>
+                    <div class="contacts header__contacts">
+                        <a href="tel:0770402060" class="contacts__phone"><span>+996 770 402 060</span></a>
+                        <span class="contacts__text">Свяжитесь с нами</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="header__nav">
+                        <button type="button" class="btn btn-gamburg" id="btn_gamburg">меню</button>
+                        <div class="menu-nav-wrap">
+                            <button type="button" class="btn btn-close" id="btn_close"></button>
+                            <ul class="menu-nav">
+                                <li class="menu-nav__li"><a href="#delivery">Доставка</a></li>
+                                <li class="menu-nav__li"><a href="#question">Оплата и скидки</a></li>
+                                <li class="menu-nav__li"><a href="#quality">Преимущества</a></li>
+                                <li class="menu-nav__li"><a href="#steps">Схемы работы</a></li>
+                                <li class="menu-nav__li"><a href="#profies">Команда</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-banner">
+        <div class="container">
+            <div class="bl__inner">
+                <h2 class="main-banner__title line_btm">Женская одежда оптом из Киргизии от производителя. Заказ от 10 000 руб</h2>
+                <h3 class="main-banner__subtitle line_btm">Трендовые платья, блузы, спортивные и классические костюмы по цене ниже рыночной до 12%. Доставка по России и СНГ</h3>
+                <div class="btn-wrap w100">
+                    <button type="button" class="btn-player"><span class="btn-player__in"></span></button>
+                    <span class="btn-player-text">Приятного просмотра</span>
+                </div>
+                <form class="w100 form-send" action="mail.php" method="POST">
+                    <div class="input-wrap d-none" id="block">
+                        <input type="text" id="phone-number" class="phone-number" placeholder="Введите телефон">
+                    </div>
+                    <button type="button" id="show" class="btn btn--light btn--withIc download_cat">Скачать каталог с оптовыми ценами</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="ic_mouse"></button>
+</div>
+<!-- Доставка -->
+<div class="submit-appl bl" id="delivery">
+    <div class="container">
+        <div class="row bl__inner">
+            <div class="col-xl-1 d-none d-xl-block"></div>
+            <div class="col-lg-5 col-md-12">
+                <div class="submit-appl-info">
+                    <div class="submit-appl-info-wrap">
+                        <h3 class="submit-appl-info__title title">Бесплатная доставка</h3>
+                        <p class="submit-appl-info__text">Закажите изделия, предоставленные в каталоге на сумму <b>выше 20 000 руб</b> и мы доставим Ваш товар</p>
+                    </div>
+                    <p class="submit-appl-info__text uppercase">бесплатно!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <form class="submit-appl-form">
+                    <h3 class="submit-appl-form__title">Оставить заявку</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваш телефон"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Ваш email"></input>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn--transp w100">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Мы в цифрах -->
+<div class="digits bl bl--dark">
+    <div class="container">
+        <div class="bl__inner">
+            
+            <h2 class="title">Мы в цифрах</h2>
+            <div class="digits_wrap">
+
+                <div class="digit digit_1">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">7</span></div>
+                    <span class="digit__text">лет на <br> рынке</span>
+                </div>
+
+                <div class="digit digit_2">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">8</span></div>
+                    <span class="digit__text">коллекций <br> в год</span>
+                </div>
+                <div class="digit digit_3">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">56</span></div>
+                    <span class="digit__text">постоянных <br> клиентов</span>
+                </div>
+                <div class="digit digit_4">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">3</span></div>
+                    <span class="digit__text">специализированных <br> цеха</span>
+                </div>
+                <div class="digit digit_5">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">+34,3</span><span class="digit__unit">млн.руб</span></div>
+                    <span class="digit__text">Сумммарный оборот <br> оптовых партнеров <br> за 6 месяцев</span>
+                </div>
+                <div class="digit digit_6">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">34</span></div>
+                    <span class="digit__text">городов <br>  по СНГ</span>
+                </div>
+                <div class="digit digit_7">
+                    <div class="circle"></div>
+                    <div class="digit-num"><span class="digit__figure">+40</span><span class="digit__unit">тысяч</span></div>
+                    <span class="digit__text">единиц товара <br> продано за <br> 6 месяцев</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Коллекции -->
+<div class="collect">
+    <div class="container collect__container">
+        <div class="collect__inner bl__inner">
+            <div class="content">
+                <h2 class="collect__title title">8 коллекций в год</h2>
+                <h3 class="collect__subtitle subtitle">от 42 до 56 размера</h3>
+
+                <div id="multi-item" class="carousel carousel-multi-item" data-ride="carousel">
+                   <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#multi-item" data-slide-to="0" class="active"></li>
+                        <li data-target="#multi-item" data-slide-to="1"></li>
+                        <li data-target="#multi-item" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 collect-item">
+                                    <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/collection1.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                            <p class="card-text">
+                                                <span class="card-text--span">Летнее повседневное платье свободного кроя1</span>
+                                                <span class="span__border-bottom"></span>
+                                            </p>
+                                            <div class="parameters">
+                                                <h4 class="parameters__title title__h4">Параметры</h4>
+                                                <table class="parameters__table">
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Ширина:</td>
+                                                        <td class="parameters__td">52 см</td>
+                                                        <td class="parameters__td">Высота:</td>
+                                                        <td class="parameters__td">48 см</td>
+                                                    </tr>
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Длина:</td>
+                                                        <td class="parameters__td">78 см</td>
+                                                        <td class="parameters__td">Вес:</td>
+                                                        <td class="parameters__td">4,8 кг</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4  collect-item clearfix d-none d-md-block">
+                                    <h4 class="carousel-item--title title__h4 title__h4--fz18">Двойка с пайетками</h4>
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/collection1.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                            <p class="card-text">
+                                                <span class="card-text--span">Летнее повседневное платье свободного кроя2</span>
+                                                <span class="span__border-bottom"></span>
+                                            </p>
+                                            <div class="parameters">
+                                                <h4 class="parameters__title title__h4">Параметры</h4>
+                                                <table class="parameters__table">
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Ширина:</td>
+                                                        <td class="parameters__td">52 см</td>
+                                                        <td class="parameters__td">Высота:</td>
+                                                        <td class="parameters__td">48 см</td>
+                                                    </tr>
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Длина:</td>
+                                                        <td class="parameters__td">78 см</td>
+                                                        <td class="parameters__td">Вес:</td>
+                                                        <td class="parameters__td">4,8 кг</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4  collect-item clearfix d-none d-md-block lastItem">
+                                    <h4 class="carousel-item--title title__h4 title__h4--fz18">Жакет с юбкой</h4>
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/collection1.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                            <p class="card-text">
+                                                <span class="card-text--span">Летнее повседневное платье свободного кроя3</span>
+                                                <span class="span__border-bottom"></span>
+                                            </p>
+                                            <div class="parameters">
+                                                <h4 class="parameters__title title__h4">Параметры</h4>
+                                                <table class="parameters__table">
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Ширина:</td>
+                                                        <td class="parameters__td">52 см</td>
+                                                        <td class="parameters__td">Высота:</td>
+                                                        <td class="parameters__td">48 см</td>
+                                                    </tr>
+                                                    <tr class="parameters__row">
+                                                        <td class="parameters__td">Длина:</td>
+                                                        <td class="parameters__td">78 см</td>
+                                                        <td class="parameters__td">Вес:</td>
+                                                        <td class="parameters__td">4,8 кг</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/.First slide-->
+
+
+                        <!--  Second slide-->
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-md-4  collect-item">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя4</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-4  collect-item clearfix d-none d-md-block">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя5</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-4  collect-item clearfix d-none d-md-block lastItem">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя6</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                               <!-- /.Second slide-->
+
+                                               <!-- Third slide -->
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-md-4  collect-item">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя7</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-4  collect-item clearfix d-none d-md-block">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя8</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-4  collect-item clearfix d-none d-md-block lastItem">
+                                                            <h4 class="carousel-item--title title__h4 title__h4--fz18">Платья</h4>
+                                                            <div class="card mb-2">
+                                                                <img class="card-img-top" src="images/content/collection1.jpg"
+                                                                     alt="Card image cap">
+                                                                <div class="card-body">
+                                                                    <h4 class="card-body-title title__h4">Платье рубашка</h4>
+                                                                    <p class="card-text">
+                                                                        <span class="card-text--span">Летнее повседневное платье свободного кроя9</span>
+                                                                        <span class="span__border-bottom"></span>
+                                                                    </p>
+                                                                    <div class="parameters">
+                                                                        <h4 class="parameters__title title__h4">Параметры</h4>
+                                                                        <table class="parameters__table">
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Ширина:</td>
+                                                                                <td class="parameters__td">52 см</td>
+                                                                                <td class="parameters__td">Высота:</td>
+                                                                                <td class="parameters__td">48 см</td>
+                                                                            </tr>
+                                                                            <tr class="parameters__row">
+                                                                                <td class="parameters__td">Длина:</td>
+                                                                                <td class="parameters__td">78 см</td>
+                                                                                <td class="parameters__td">Вес:</td>
+                                                                                <td class="parameters__td">4,8 кг</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    <a class="btn btn--light btn--catalog">Смотреть в каталоге</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!--/.Third slide-->
+
+                    </div>
+                    <!--/.Slides-->
+
+                </div>
+                <!--/.Carousel Wrapper-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Свойства компании -->
+<div class="quality bl--dark" id="quality">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="title">Почему 74% клиентов становятся нашими постоянными клиентами?</h2>
+            <ul class="quality-list">
+                <li class="quality-item refresh-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">Постоянное обновление</h4>
+                    <div class="quality-item__text">
+                        Мы обновляем наш ассортимен еженедельно. Нашим партнерам важно быть актуальными для своих клиентов
+                    </div>
+                </li>
+                <li class="quality-item income-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">Доходность до 300%</h4>
+                    <div class="quality-item__text">
+                        Мы используем корейские и турецкие ткани. По качеству они не уступают европейским, но существенно снижают стоимость изделия. Таким Образом Вы можете иметь большую прибыль при этом быть конкурентоспособными.
+                    </div>
+                </li>
+                <li class="quality-item perf-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">Доведение до совершенства</h4>
+                    <div class="quality-item__text">
+                        Мы шьем до 30 образцов в неделю, и лишь 2-3 из них  превращаются в конечные изделия. Только так можно гарантировать ходовой ассортимент.
+                    </div>
+                </li>
+                <li class="quality-item shipping-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">Доставка по России и СНГ</h4>
+                    <div class="quality-item__text">
+                        Организуем доствку товара до Вашего города.
+                    </div>
+                </li>
+                <li class="quality-item qlt_check-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">3-х уровневая проверка качества</h4>
+                    <div class="quality-item__text">
+                        на стадии моделирования и выкройки (подсадка ткани)
+                        на стадии шитья и сборки (швы, обработка деталей, глажка)
+                        на стадии упаковки (пятна, этикетки и тд)
+                    </div>
+                </li>
+                <li class="quality-item sale-it">
+                    <span class="quality-item__ic"></span>
+                    <h4 class="quality-item__title">Скидки до 7%</h4>
+                    <div class="quality-item__text">
+                        При крупном заказе делаем индивидуальные скидки.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Хит продаж -->
+<div class="hit-sales hits">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="hits__title title">Хиты продаж нашего ассортимента</h2>
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class="z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal1"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal7"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal6"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal4"></a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal2"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal5"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal3"></a>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-12 mb-4">
+
+                    <!--Modal: Name-->
+                    <div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog " role="document">
+
+                            <!--Content-->
+                            <div class="modal-content">
+
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class=" z-depth-1-half">
+                                        <img src="images\content\collection1.jpg" alt="Хиты продаж" class="hits__item--img">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--/.Content-->
+
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a><img class="img-fluid z-depth-1" src="images\content\collection1.jpg" alt="video"
+                            data-toggle="modal" data-target="#modal8"></a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+            <a class="btn btn--light btn--catalog">Скачать весь ассортимент</a>
+        </div>
+    </div>
+</div>
+<!-- Доставка -->
+<div class="submit-appl bl bl--grey">
+    <div class="container">
+        <div class="row bl__inner">
+            <div class="col-xl-1 d-none d-xl-block"></div>
+            <div class="col-lg-5 col-md-12">
+                <div class="submit-appl-info">
+                    <div class="submit-appl-info-wrap">
+                        <h3 class="submit-appl-info__title title">Бесплатная доставка</h3>
+                        <p class="submit-appl-info__text">Закажите изделия, предоставленные в каталоге на сумму <b>выше 20 000 руб</b> и мы доставим Ваш товар</p>
+                    </div>
+                    <p class="submit-appl-info__text uppercase">бесплатно!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <form class="submit-appl-form">
+                    <h3 class="submit-appl-form__title">Оставить заявку</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваш телефон"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Ваш email"></input>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn--transp w100">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Калькуляция приыбли -->
+<div class="calc_profits">
+    <div class="container calc_profits__container">
+        <div class="bl__inner">
+            <div class="content">
+                <h2 class="calc_profits__title title title_color-white">Расчитайте свою прибыль</h2>
+                <div class="calc_profits__cols">
+                    <div class="calc_profits__col calc_profits__col--left">
+                        <div class="range-slider">
+                            <div class="range-slider__above-text">
+                                <span class="above-text above-text--title">Закуп (в месяц)</span>
+                                <p class="above-text above-text--info"><span class="purchase_value" id="purchase_value"></span> p</p>
+                            </div>
+                            <div class="range-slide__container">
+                                <input type="range" min="10000" max="500000" value="150000" class="slider" id="purcheseRange" step="1000">
+                            </div>
+                            <div class="range-slide__scale">
+                                <ul class="scale">
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                </ul>
+                                <div class="range-slide-info">
+                                    <span class="range-slide-info--span" id="purcheseRangeMin"></span>
+                                    <span class="range-slide-info--span" id="purcheseRangeMax"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="range-slider">
+                            <div class="range-slider__above-text">
+                                <span class="above-text above-text--title">Наценка(%)</span>
+                                <p class="above-text above-text--info"><span class="charge_value" id="charge_value"></span> %</p>
+                            </div>
+                            <div class="range-slide__container">
+                                <input type="range" min="80" max="300" value="180" class="slider" id="chargeRange" step="10">
+                            </div>
+                            <div class="range-slide__scale">
+                                <ul class="scale">
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                </ul>
+                                <div class="range-slide-info">
+                                    <span class="range-slide-info--span"  id="chargeRangeMin"></span>
+                                    <span class="range-slide-info--span"  id="chargeRangeMax"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="range-slider">
+                            <div class="range-slider__above-text">
+                                <span class="above-text above-text--title">Расходы (аренда, зп и т.д.)</span>
+                                <p class="above-text above-text--info"><span class="cost_value" id="cost_value"></span></p>
+                            </div>
+                            <div class="range-slide__container">
+                                <input type="range" min="0" max="90000" value="45000" class="slider" id="costRange" step="1000">
+                            </div>
+                            <div class="range-slide__scale">
+                                <ul class="scale">
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                    <li class="scale__item"></li>
+                                </ul>
+                                <div class="range-slide-info">
+                                    <span class="range-slide-info--span" id="costRangeMin"></span>
+                                    <span class="range-slide-info--span" id="costRangeMax"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="calc_profits__col calc_profits__col--right">
+                        <div class="calc_profits_rows">
+                            <div class="calc_profits_row calc_profits_1row">
+                                <div class="profits calc_profits_1 calc_profits_1--left calc_profits__purchase">
+                                    <span class="profits__title">Ваш закуп</span>
+                                    <span class="profits__value purchase_value"></span>
+                                </div>
+                                <div class="profits calc_profits_1 calc_profits_1--right calc_profits__profit">
+                                    <span class="profits__title">Ваша прибыль</span>
+                                    <span class="profits__value profit_value" id="profit_value"></span>
+                                </div>
+                            </div>
+                            <div class="calc_profits_row calc_profits_2row">
+                                <div class="profits calc_profits__12profit">
+                                    <span class="profits12__title profits__title profits__title--fz20 profits__title--colorWhite">Прибыль за 12 месяцев</span>
+                                    <span class="profits__value profit12_value" id="profit12_value"></span>
+                                    <button class="btn btn--light btn__getProfit">Хочу такую прибыль</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Карта распространения -->
+<div class="spread_map">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="spread_map__title title">Выпускаем 8 коллекций в год и продаем больше 1 млн платьев от Москвы до Качатки</h2>
+            <div class="spread_map__img-wrapper">
+                <img src="images/content/map_sng_with_pins.png" alt="" class="spread_map__img">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Как мы работаем -->
+<div class="steps bl--dark" id="steps">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="title">Как мы работаем</h2>
+            <ul class="steps-list">
+                <li class="steps-item appl-it">
+                    <h4 class="steps-item__title">Вы оставляете заявку</h4>
+                    <p class="steps-item__text">Впишите имя и номер телефона(Whattsapp) в форму на сайте</p>
+                    <button type="button" class="btn btn--light">Оставить заявку</button>
+                    <span class="steps-item-digit">1</span>
+                </li>
+                <li class="steps-item call-it">
+                    <h4 class="steps-item__title">Мы звоним</h4>
+                    <p class="steps-item__text">Наш менеджер связывается с вами, чтобы обсудить все условия и детали заказа</p>
+                    <span class="steps-item-digit">2</span>
+                </li>
+                <li class="steps-item checkout-it">
+                    <h4 class="steps-item__title">Оформляем заказ</h4>
+                    <p class="steps-item__text">Если выбранных изделий не окажется в наличии, то Вы можете заказать, либо бырать другие модели</p>
+                    <span class="steps-item-digit">3</span>
+                </li>
+                <li class="steps-item pay-it">
+                    <h4 class="steps-item__title">Оплата</h4>
+                    <p class="steps-item__text">Вы оплачиваете полную сумму заказа удобным для вас способом</p>
+                    <span class="steps-item-digit">4</span>
+                </li>
+                <li class="steps-item send-it">
+                    <h4 class="steps-item__title">Отправка товара</h4>
+                    <p class="steps-item__text">Мы отправляем Ваш товар через транспортные компании</p>
+                    <span class="steps-item-digit">5</span>
+                </li>
+                <li class="steps-item receive-it">
+                    <h4 class="steps-item__title">Приемка товара</h4>
+                    <p class="steps-item__text">Вы получаете товар в Вашем городе </p>
+                    <span class="steps-item-digit">6</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Отзывы -->
+<div class="reviews">
+    <div class="container">
+        <div class="bl__inner">
+            <div class="content">
+                <h2 class="reviews__title title">Отзывы наших клиентов</h2>
+                <h3 class="reviews__subtitle subtitle">Что говорят наши клиенты</h3>
+
+                <div id="carousel-example-generic" class="carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="review">
+                                <div class="review__img">
+                                    <img class="user__img" src="images/content/user1.jpg" alt="Фото">
+                                </div>
+                                <div class="review__fio">Мария Исаева</div>
+                                <span class="span__border-bottom"></span>
+                                <div class="review__text">Мне все понравилось. Я оперативно получал ответы на возникающие вопросы. Еще раз обращусь за помощью ​к специалистам
+                                    ​ООО "Коллегия".</div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="review__img">
+                                    <img class="user__img" src="images/content/user1.jpg" alt="Фото">
+                                </div>
+                                <div class="review__fio">Татьяна Сергеева</div>
+                                <span class="span__border-bottom"></span>
+                                <div class="review__text">Мне все понравилось. Я оперативно получал ответы на возникающие вопросы. Еще раз обращусь за помощью ​к специалистам
+                                    ​ООО "Коллегия".</div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="review__img">
+                                    <img class="user__img" src="images/content/user1.jpg" alt="Фото">
+                                </div>
+                                <div class="review__fio">Константин Иванов</div>
+                                <span class="span__border-bottom"></span>
+                                <div class="review__text">Мне все понравилось. Я оперативно получал ответы на возникающие вопросы. Еще раз обращусь за помощью ​к специалистам
+                                    ​ООО "Коллегия".</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Доставка по Росии и СНГ -->
+<div class="delivery bl--dark">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="title">Доставка товара <span class="ascent_col">по России и СНГ</span></h2>
+            <p class="delivery-text">
+                Доставка осуществляется транспортными компаниями по России и СНГ. Стоимость доставки расчитывается по тарифам транспортных компаний (20 - 40 руб за кг). При заказе от 20 000 руб для России доставка до стыковочного города осуществляется за счет компании.
+            </p>
+            <ul class="delivery-text">
+                <li>* Города доставки по России</li>
+                <li>* Города доставки по Казахстану</li>
+                <li>* Города доставки по СНГ (Узбекистан, Беларусь)</li>
+            </ul>
+            <ul class="delivery-list">
+                <li class="delivery-item package-it">Бережно упакуем ваш заказ в водонепроницаемые мешки</li>
+                <li class="delivery-item bus-it">В этот же день ваш заказ будет в пути</li>
+                <li class="delivery-item pay-it">Услуги доставки оплачиваете при получении товара </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Часто задаваемы вопросы -->
+<div class="question" id="question">
+    <div class="container">
+        <div class="bl__inner">
+            <h2 class="question__title title">Часто задаваемые вопросы клиентов</h2>
+            <div class="question__cols">
+                <div class="question__col question__col--left">
+                    <div class="question__item question__item--payment">
+                        <h4 class="question__item--title">Какие варианты оплаты?</h4>
+                        <div class="question__item--answer answer">
+                            <span class="answer__row">1) Банковской картой Сбербенк ---> Сбербанк</span>
+                            <span class="answer__row">2) Банковской картой Сбербанк ---> Банк Кыргызстан</span>
+                            <span class="answer__row">3) Банковским переводом на имя сотрудника компании</span>
+                        </div>
+                    </div>
+
+                    <div class="question__item question__item--returns">
+                        <h4 class="question__item--title">Возврат товара?</h4>
+                        <div class="question__item--answer answer">
+                            <p class="answer__row answer__paragraph">
+                                Компания BAKI WOMAN гарантирует партнерам доставку
+                                товара надлежащего качества и в соответствии с заявленными характеристиками.
+                            </p>
+
+                            <p class="answer__row answer__paragraph">
+                                Однако, при получении товара с производственным браком, осуществляется возврат товара или компенсация его стоимости, в случае если возврат невозмоден. Все затраты на на возврат оплачиваются за наш счет.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question__col question__col--right">
+
+                    <div class="question__item question__item--discount">
+                        <h4 class="question__item--title">Как получить скидку на товар?</h4>
+                        <div class="question__item--answer">
+                            <p class="answer__row answer__paragraph">
+                                За годы сотрудничества с нашими партнерами, мы выявили самую эффективную и простую для вас систему скидок - больше сумма заказа больше скидка.
+                            </p>
+
+                            <p class="answer__paragraph">
+                                <span class="answer__row">Свыше 50 000 руб - 1% - VIP Простой</span>
+                                <span class="answer__row">Свыше 100 000 руб - 2% - VIP Бронза</span>
+                                <span class="answer__row">Свыше150 000 руб - 3% - VIP Серебро</span>
+                                <span class="answer__row">Свыше 200 000 руб - 4% -VIP Золото</span>
+                                <span class="answer__row">Свыше 250 000 руб - 5% - VIP Платина</span>
+                                <span class="answer__row">Свыше 300 000 руб - 7% - VIP Бриллиант</span>
+                                <span class="answer__row">Скидки считаются от суммы заказа</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="question__item question__item--delivery">
+                        <h4 class="question__item--title">Сроки и стоимость доставки?</h4>
+                        <div class="question__item--answer">
+                            <p class="answer__paragraph">
+                                Стоимость доставки определяется по тарифам транспортной компании ( примерно от 20 до 40 руб за кг) до стыковочных городов.
+                                Далее до конкретного города оплата производится отдельно (недорого) по тарифам ТК.
+                            </p>
+                            <p class="answer__paragraph">
+                                Сроки доставки зависят от расстояния городов (примерно от 5 - 20 дней). Вы можете отслеживать передвижение вашего товара на сайте ТК.
+                            Всю необходимую информацию вам предоставит ваш менеджер по телефону (Whattsapp)
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Доставка -->
+<div class="submit-appl bl bl--dark">
+    <div class="container">
+        <div class="row bl__inner">
+            <div class="col-xl-1 d-none d-xl-block"></div>
+            <div class="col-lg-5 col-md-12">
+                <div class="submit-appl-info">
+                    <div class="submit-appl-info-wrap">
+                        <h3 class="submit-appl-info__title title">Бесплатная доставка</h3>
+                        <p class="submit-appl-info__text">Закажите изделия, предоставленные в каталоге на сумму <b>выше 20 000 руб</b> и мы доставим Ваш товар</p>
+                    </div>
+                    <p class="submit-appl-info__text uppercase">бесплатно!</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <form class="submit-appl-form">
+                    <h3 class="submit-appl-form__title">Оставить заявку</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваше имя"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ваш телефон"></input>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Ваш email"></input>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn--transp w100">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Услуга пошива на заказ -->
+<div class="service">
+    <div class="container">
+        <div class="bl__inner service__cols">
+            <div class="service__col service__col--left">
+                <div class="img-wrapper">
+                    <img class="service--img" src="images/content/service.jpg" alt="Услуга пошива на заказ">
+                </div>
+            </div>
+            <div class="service__col service__col--right">
+                <h2 class="service__title title">Услуга пошива на заказ</h2>
+                <div class="service__text">
+                    Ответьте на 5 простых вопросов и узнайте, какой уютной может быть гостиная в вашем доме
+                </div>
+                <button type="button" class="service__btn btn btn--light">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Лицензии и сертификаты -->
+<div class="license">
+    <div class="container license__container">
+        <div class="bl__inner">
+            <div class="content">
+                <h2 class="license_title title title_color-white">Лицензии и сертификаты</h2>
+                <div id="multi-item-license" class="carousel carousel-multi-item" data-ride="carousel">
+
+                    <!--Controls-->
+                    <a class="carousel-control-prev" href="#multi-item-license" role="button" data-slide="prev">
+                        <span class="license__carousel-control-prev-icon carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#multi-item-license" role="button" data-slide="next">
+                        <span class="license__carousel-control-next-icon carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!--/.Controls-->
+
+                    <!--Indicators-->
+                    <ol class="carousel-indicators license__carousel-indicators">
+                        <li data-target="#multi-item-license" data-slide-to="0" class="active"></li>
+                        <li data-target="#multi-item-license" data-slide-to="1"></li>
+                        <li data-target="#multi-item-license" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+
+                        <!--First slide-->
+                        <div class="carousel-item active">
+
+                            <div class="row">
+                                <div class="col-md-3 license-item">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/.First slide-->
+
+                        <!--Second slide-->
+                        <div class="carousel-item">
+
+                            <div class="row">
+                                <div class="col-md-3 license-item">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Second slide-->
+
+                        <!--Third slide-->
+                        <div class="carousel-item">
+
+                            <div class="row">
+                                <div class="col-md-3 license-item">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 license-item clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="images/content/license/license.jpg"
+                                             alt="Лицензия">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Third slide-->
+
+                    </div>
+                    <!--/.Slides-->
+
+                </div>
+                <!--/.Carousel Wrapper-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Профессионалы -->
+<div class="profies" id="profies">
+    <div class="container">
+        <div class="bl__inner">
+            <ul class="profies__list">
+                <li class="profies__item">
+                    <div class="profies__img--wrapper">
+                        <img src="images/content/profies.jpg" alt="photo" class="profies__img">
+                    </div>
+                    <h4 class="profies__fio">Ольга Новоселова</h4>
+                    <span class="profies__occ">Менеджер проектов</span>
+                    <span class="horizontalLine"></span>
+                    <div class="profies__text">
+                        Работает в компании с момента основания и участвует в развитии нескольких проектов. Эксперт в своей области. Ежегодно посещает международные конференции.
+                    </div>
+                </li>
+                <li class="profies__item">
+                    <div class="profies__img--wrapper">
+                        <img src="images/content/profies.jpg" alt="photo" class="profies__img">
+                    </div>
+                    <h4 class="profies__fio">Ольга Новоселова</h4>
+                    <span class="profies__occ">Менеджер проектов</span>
+                    <span class="horizontalLine"></span>
+                    <div class="profies__text">
+                        Работает в компании с момента основания и участвует в развитии нескольких проектов. Эксперт в своей области. Ежегодно посещает международные конференции.
+                    </div>
+                </li>
+                <li class="profies__item">
+                    <div class="profies__img--wrapper">
+                        <img src="images/content/profies.jpg" alt="photo" class="profies__img">
+                    </div>
+                    <h4 class="profies__fio">Ольга Новоселова</h4>
+                    <span class="profies__occ">Менеджер проектов</span>
+                    <span class="horizontalLine"></span>
+                    <div class="profies__text">
+                        Работает в компании с момента основания и участвует в развитии нескольких проектов. Эксперт в своей области. Ежегодно посещает международные конференции.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Координаты -->
+<div class="coordinate">
+    <div id="map" class="map"></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bl--dark">
+    <div class="container">
+        <div class="bl__inner">
+            <ul class="footer-list">
+                <li class="footer-item">
+                    <p class="footer-text">Остались вопросы?</p>
+                    <p>Пишите или звоните</p>
+                </li>
+                <li class="footer-item">
+                    <p>Наш телефон:</p>
+                    <p class="footer-text">8 (800) 123-45-67</p>
+                </li>
+                <li class="footer-item">
+                    <p>Наш email:</p>
+                    <p class="footer-text">info@info.com</p>
+                </li>
+                <li class="footer-item footer-item-soc">
+                    <p>Быстрая связь:</p>
+                    <ul class="social">
+                        <li class="social-li"><a href="https://api.whatsapp.com/send?phone=996770402060" title="Написать в WhatsApp" class="btn whats_up-ic"></a></li>
+                        <li class="social-li"><a href="" class="btn viber-ic"></a></li>
+                        <li class="social-li"><a href="" class="btn telegram-ic"></a></li>
+                        <li class="social-li"><a href="" class="btn inst-ic"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<a href="tel:+996770402060" class="fixed-tel is-animating" title="Позвонить"></a>
+<a href="https://api.whatsapp.com/send?phone=996770402060" title="Написать в WhatsApp" class="fixed-tel is-animating fixed-wa"></a>
+<script src="https://api-maps.yandex.ru/2.1/?<apikey=d032c155-602a-458a-8775-28e4a4f2e0bc>&lang=ru_RU" type="text/javascript">
+</script>
+<script src="js/yandexMap.js"></script>
+</body>
+</html>
